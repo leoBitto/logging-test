@@ -162,7 +162,8 @@ DATA_UPLOAD_MAX_MEMORY_SIZE = 104857600
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-
+if DEBUG:
+    pass
 # if not DEBUG:
 #     # Configurazione del logger
 #     LOGGING = {
