@@ -9,7 +9,8 @@ Group=www-data
 WorkingDirectory=/home/USER/PROJECTDIR/src
 EnvironmentFile=/home/USER/PROJECTDIR/src/base/.env
 ExecStart=/home/USER/PROJECTDIR/env_dj/bin/gunicorn \
-          --access-logfile - \
+          --error-logfile /var/log/gunicorn/error.log \
+          --access-logfile /var/log/gunicorn/access.log
           --workers 3 \
           --bind unix:/run/gunicorn.sock \
           --timeout 90 \
